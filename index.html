@@ -1077,6 +1077,9 @@
     });
   }, { passive: true });
 </script>
-
+<script>
+    if (window.location.hash === '#privacy') openModal('privacy');
+    if (window.location.hash === '#terms') openModal('terms');
+  </script>
 </body>
 </html>
