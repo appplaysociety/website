@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — PlaySociety</title>
+  <meta name="description" content="PlaySociety Privacy Policy — how we collect, use, and protect your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:           #1C1F2A;
+      --navy-light:     #2a2f40;
+      --gold:           #C8A96A;
+      --gold-light:     #d9be8a;
+      --gold-pale:      #f6eed9;
+      --bg:             #F8F9FB;
+      --surface:        #FFFFFF;
+      --border:         #E5E7EB;
+      --text-primary:   #1C1F2A;
+      --text-secondary: #6B7280;
+      --radius:         16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 800; color: var(--navy);
+    }
+    .nav-brand img { width: 36px; height: 36px; object-fit: contain; }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold-pale); color: var(--navy);
+      padding: 8px 18px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-back:hover { background: var(--gold); color: var(--navy); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2d3348 100%);
+      padding: 64px 5%;
+      text-align: center;
+    }
+    .hero-label {
+      display: inline-block;
+      background: rgba(200,169,106,0.15);
+      border: 1px solid rgba(200,169,106,0.3);
+      color: var(--gold);
+      padding: 5px 16px; border-radius: 50px;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; color: #fff;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+    }
+
+    /* ── CONTENT ── */
+    .content-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 64px 5% 100px;
+    }
+
+    /* Table of contents */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+    .toc h2 {
+      font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .toc ol {
+      padding-left: 20px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .toc ol li a {
+      font-size: 0.9rem; color: var(--navy);
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--gold); }
+
+    /* Sections */
+    .policy-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 80px;
+    }
+    .policy-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gold-pale);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .policy-section h2 .num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--gold-pale); color: var(--navy);
+      font-size: 0.85rem; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .policy-section p {
+      font-size: 0.95rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 12px;
+    }
+    .policy-section ul {
+      padding-left: 0; list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+      margin-bottom: 12px;
+    }
+    .policy-section ul li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;
+    }
+    .policy-section ul li::before {
+      content: '→';
+      color: var(--gold); font-weight: 700;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .policy-section strong { color: var(--navy); font-weight: 600; }
+
+    /* Highlight box */
+    .highlight-box {
+      background: var(--gold-pale);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.9rem; color: var(--navy); line-height: 1.7;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 32px; text-align: center;
+      margin-top: 48px;
+    }
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #fff; font-size: 1.3rem; margin-bottom: 8px;
+    }
+    .contact-card p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 20px; }
+    .contact-card a {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--navy);
+      padding: 12px 28px; border-radius: 50px;
+      font-weight: 700; font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .contact-card a:hover { background: var(--gold-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 32px 5%;
+      text-align: center;
+    }
+    footer p { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    footer a { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .content-wrap { padding: 40px 5% 80px; }
+      .hero { padding: 48px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-brand">
+    <img src="logo.png" alt="PlaySociety" />
+    PlaySociety
+  </div>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p>Last updated: January 2025</p>
+</div>
+
+<!-- ── CONTENT ── -->
+<div class="content-wrap">
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Data Sharing</a></li>
+      <li><a href="#s4">Data Security</a></li>
+      <li><a href="#s5">Data Retention</a></li>
+      <li><a href="#s6">Your Rights</a></li>
+      <li><a href="#s7">Children's Privacy</a></li>
+      <li><a href="#s8">Changes to This Policy</a></li>
+      <li><a href="#s9">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.8; margin-bottom:40px;">
+    PlaySociety ("we", "our", or "us") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use the PlaySociety mobile application and website.
+  </p>
+
+  <!-- Section 1 -->
+  <div class="policy-section" id="s1">
+    <h2><span class="num">1</span>Information We Collect</h2>
+    <p>When you use PlaySociety, we collect the following types of information:</p>
+    <ul>
+      <li><strong>Phone number</strong> — used for account creation and secure OTP-based authentication</li>
+      <li><strong>Name and profile information</strong> — your name, role (parent, coach, or RWA admin), tower, and apartment number provided during registration</li>
+      <li><strong>Usage data</strong> — app interactions, session attendance records, fee payment status, and performance notes</li>
+      <li><strong>Device information</strong> — device type, operating system version, and FCM token for push notifications</li>
+    </ul>
+    <div class="highlight-box">
+      We do not collect financial information. PlaySociety does not process payments — fee tracking is informational only.
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="policy-section" id="s2">
+    <h2><span class="num">2</span>How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li>To authenticate your identity via OTP login</li>
+      <li>To provide core app functionality — batch enrollment, attendance tracking, fee management, and performance notes</li>
+      <li>To send push notifications about your sessions, fees, and coach applications</li>
+      <li>To allow your society's coach and RWA admin to manage sports programs</li>
+      <li>To improve the PlaySociety platform and fix issues</li>
+    </ul>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="policy-section" id="s3">
+    <h2><span class="num">3</span>Data Sharing</h2>
+    <p>We do not sell your personal data to any third party. We share data only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Google Cloud Platform</strong> — for secure data storage, hosting, and push notifications (Firebase FCM)</li>
+      <li><strong>Your society's coach and RWA admin</strong> — limited profile and attendance data as required for the sports program you are enrolled in</li>
+      <li><strong>Legal requirements</strong> — if required by law or to protect the rights and safety of our users</li>
+    </ul>
+    <div class="highlight-box">
+      Your phone number and profile data are never shared with advertisers or marketing companies.
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="policy-section" id="s4">
+    <h2><span class="num">4</span>Data Security</h2>
+    <ul>
+      <li>All data is transmitted over HTTPS (TLS encryption)</li>
+      <li>Data is stored securely on Google Cloud Platform with restricted access</li>
+      <li>Authentication tokens are stored in your device's encrypted secure storage — Android Keystore on Android, and iOS Keychain on iPhone</li>
+      <li>JWT tokens are used for session management with short expiry periods</li>
+    </ul>
+    <p>While we take reasonable measures to protect your data, no method of transmission over the internet is 100% secure. We encourage you to keep your device secure.</p>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="policy-section" id="s5">
+    <h2><span class="num">5</span>Data Retention</h2>
+    <p>We retain your personal data for as long as your account is active on PlaySociety. Attendance records, fee history, and performance notes are retained for the duration of your enrollment in a society's sports program.</p>
+    <p>You may request deletion of your account and all associated data at any time by contacting us at <strong>appplaysociety@gmail.com</strong>. We will process your request within 30 days.</p>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="policy-section" id="s6">
+    <h2><span class="num">6</span>Your Rights</h2>
+    <p>You have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+      <li><strong>Correction</strong> — request correction of inaccurate or incomplete data</li>
+      <li><strong>Deletion</strong> — request deletion of your account and associated data</li>
+      <li><strong>Withdraw consent</strong> — withdraw consent for data processing at any time by deleting your account</li>
+      <li><strong>Portability</strong> — request your data in a portable format</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <strong>appplaysociety@gmail.com</strong>.</p>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="policy-section" id="s7">
+    <h2><span class="num">7</span>Children's Privacy</h2>
+    <p>PlaySociety is intended for users 18 years and above. Parents and guardians may use the app to manage sports enrollment on behalf of their minor children.</p>
+    <p>We do not knowingly collect personal data directly from children under the age of 13. If you believe we have inadvertently collected such data, please contact us immediately at <strong>appplaysociety@gmail.com</strong> and we will delete it promptly.</p>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="policy-section" id="s8">
+    <h2><span class="num">8</span>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. When we make changes, we will update the "Last updated" date at the top of this page.</p>
+    <p>We encourage you to review this policy periodically. Continued use of PlaySociety after changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <!-- Section 9 -->
+  <div class="policy-section" id="s9">
+    <h2><span class="num">9</span>Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please reach out to us:</p>
+  </div>
+
+  <!-- Contact Card -->
+  <div class="contact-card">
+    <h3>Privacy Questions?</h3>
+    <p>We typically respond within 24 hours on business days.</p>
+    <a href="mailto:appplaysociety@gmail.com">📧 appplaysociety@gmail.com</a>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2025 PlaySociety. All rights reserved. &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
