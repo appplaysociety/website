@@ -882,15 +882,8 @@
     <div class="footer-col">
       <h4>Legal</h4>
       <ul>
-        <script>
-        // Auto-open modal if URL hash matches
-            if (window.location.hash === '#privacy') {
-              openModal('privacy');
-            }
-            if (window.location.hash === '#terms') {
-              openModal('terms');
-            }
-      </script>
+        <li><a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a></li>
+        <li><a href="#" onclick="openModal('terms'); return false;">Terms of Use</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
